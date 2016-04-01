@@ -2,24 +2,26 @@ package tlam26;
 
 public abstract class Product {
 	private String name;
-	private String price;
+	private Double price;
 	public String getName() {
 		return name;
 	}
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getPrice() {
-		return price;
-	}
-	public void setPrice(String price) {
-		this.price = price;
-	}
+
+
 	public Product() {
 		
 	}
-	public Product(String name, String price) {
+	public Product(String name, Double price) {
 		this.name = name;
+		this.price = price;
+	}
+	public Double getPrice() {
+		return price;
+	}
+	public void setPrice(Double price) {
 		this.price = price;
 	}
 	public String toString() {

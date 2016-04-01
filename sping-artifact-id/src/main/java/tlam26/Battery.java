@@ -11,7 +11,7 @@ public class Battery extends Product{
 	public void setRechargeable(Boolean rechargeable) {
 		this.rechargeable = rechargeable;
 	}
-	public Battery (String name, String price) {
+	public Battery (String name, Double price) {
 		super(name,price);
 	}
 }

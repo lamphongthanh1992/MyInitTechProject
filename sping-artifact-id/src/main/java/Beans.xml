@@ -1,13 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.springframework.org/schema/beans
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 	<bean id="aaa" class="tlam26.Battery">
-		<!-- <property name="name" value="AAA"/>
-		<property name="price" value="2.5"/> -->
+		<!-- <property name="name" value="AAA"/> <property name="price" value="2.5"/> -->
 		<constructor-arg value="AAA"></constructor-arg>
 		<constructor-arg value="2.5"></constructor-arg>
-		<property name="rechargeable" value="true"/>
+		<property name="rechargeable" value="true" />
 	</bean>
+	<bean name="sequenceGenerator" class="tlam26.SequenceGenerator">
+		<property name="prefix" value="30" />
+		<property name="suffix" value="A" />
+		<property name="initial" value="100000" />
+	</bean>
+<!-- 	
+	<bean id="discoutaaa" class="tlam26.DiscountFactoryBean">
+		<property name="product">
+			<bean class="tlam26.Battery">
+				<constructor-arg value="AAA" /> 
+				<constructor-arg value="2.5" />
+			</bean>
+		</property>
+		<property name="discount" value="0.2" />
+	</bean> -->
+	
 </beans>

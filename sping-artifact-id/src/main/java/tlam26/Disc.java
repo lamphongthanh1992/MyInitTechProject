@@ -12,7 +12,7 @@ public class Disc extends Product{
 		this.capacity = capacity;
 	}
 	
-	public Disc(String name, String price) {
+	public Disc(String name, Double price) {
 		super (name, price);
 	}
 	
